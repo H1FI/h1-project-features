@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: {ProjectName} Features
+Plugin Name: H1 Project Features
 Plugin URI: http://h1.fi
-Description: Define Custom post types, taxonomies and fields for {ProjectName}
-Version: 1.0
+Description: Define Custom post types, taxonomies and fields for project
+Version: 1.1
 Author: Daniel Koskinen / H1
 Author URI: http://h1.fi
 License: GPL2
@@ -24,13 +24,19 @@ License: GPL2
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+/**
+ * Useful helper functions
+ */
 require_once 'lib/h1lib.php';
+
+/**
+ * Basic model classes for post types etc
+ */
 require_once 'lib/h1modelapp.php';
 
 //
 //  SET THE PREFIXES AND CHANGE THE PLUGIN NAME / PLUGIN CLASSNAME!!!!
 //
-
 if ( !class_exists( 'H1_Project_Features' ) ) {
 
 	class H1_Project_Features {
@@ -106,6 +112,8 @@ if ( !class_exists( 'H1_Project_Features' ) ) {
 		 * @return  void
 		 */
 		public function plugins_loaded_hook() {
+
+			$this->register_post_types();
 
 		}
 
