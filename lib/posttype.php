@@ -125,7 +125,7 @@ abstract class H1M_PostType {
 	}
 	
 	protected $post;
-	function __construct( &$post ) {
+	function __construct( $post ) {
 		$this->post = $post;
 	}
 }

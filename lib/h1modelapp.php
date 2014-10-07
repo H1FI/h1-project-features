@@ -30,7 +30,7 @@ class H1ModelApp {
 		foreach ( $files as $file ) {
 			$class = $this->get_inheriting_class_name( $file, 'H1M_PostType' );
 			if ( $class ) {
-				call_user_func( array( $class, 'register' ), &$meta_boxes );
+				call_user_func( array( $class, 'register' ), $meta_boxes );
 			}
 		}
 	}
